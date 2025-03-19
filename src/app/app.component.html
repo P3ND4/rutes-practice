@@ -2,13 +2,13 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link" aria-current="true" routerLink = "">Home</a>
+        <a [ngClass]="{'active': isActive('/')}" class="nav-link" aria-current="true" routerLink = "">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink = "contact">contact</a>
+        <a [ngClass]="{'active': isActive('/contact')}" class="nav-link" routerLink = "contact">contact</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="products">Products</a>
+        <a [ngClass]="{'active': isActive('/products')}" class="nav-link" routerLink="products">Products</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>

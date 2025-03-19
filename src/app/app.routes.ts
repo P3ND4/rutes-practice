@@ -11,6 +11,5 @@ export const routes: Routes = [
     {path: "contact", component: ContactComponent},
     {path:'products', component: TableComponent},
     {path: 'products/:id', component: ProductDetailComponent},
-    {path: "**", redirectTo: "", pathMatch: "full"}
     
 ];

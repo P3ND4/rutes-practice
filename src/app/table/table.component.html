@@ -8,23 +8,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>$10</td>
-        <button class="btn btn-primary" [routerLink]="['products', 'Mark']">Details</button>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>$1</td>
-        <button class="btn btn-primary" [routerLink]="['products', 'Jacob']">Details</button>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry the Bird</td>
-        <td>$13</td>
-        <button class="btn btn-primary" [routerLink]="['products', 'Larry']">Details</button>
+      <tr *ngFor = "let item of prodList" >
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.price | currency}}</td>
+        <button class="btn btn-primary" [routerLink]="['/products', item.id]">Details</button>
       </tr>
     </tbody>
   </table>
