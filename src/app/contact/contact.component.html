@@ -1,19 +1,31 @@
-<div class = "container" style="margin: 20px; align-items: center;">
-    <form [formGroup]= "formContact" (ngSubmit)="enviar()">
+<div class="container" style="margin: 20px; align-items: center;">
+    <form [formGroup]="formContact" (ngSubmit)="enviar()">
         <div class="mb-3">
-            <label for="name" class="form-label" >Name</label>
-            <input type="email" [ngClass]="{'is-invalid': hasErrors('name', 'required')}" class="form-control" id="name" formControlName = "name">
-            <div class="text-danger" *ngIf= "hasErrors('name', 'required')">
+            <label for="name" class="form-label">Name</label>
+            <input type="email" [ngClass]="{'is-invalid': hasErrors('name', 'required')}" class="form-control" id="name"
+                formControlName="name">
+            <div class="text-danger" *ngIf="hasErrors('name', 'required')">
                 Please choose a username.
             </div>
         </div>
 
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" [ngClass]="{'is-invalid': hasErrors('email', 'required') || hasErrors('email', 'email')}" class="form-control" id="email" formControlName = "email">
-            <div class="text-danger" *ngIf= "hasErrors('email', 'email')">invalid mail</div>
-            <div class="text-danger" *ngIf= "hasErrors('email', 'required')">invalid mail</div>
+            <input type="email"
+                [ngClass]="{'is-invalid': hasErrors('email', 'required') || hasErrors('email', 'email')}"
+                class="form-control" id="email" formControlName="email">
+            <div class="text-danger" *ngIf="hasErrors('email', 'email')">invalid mail</div>
+            <div class="text-danger" *ngIf="hasErrors('email', 'required')">invalid mail</div>
         </div>
+        <label for="select">Selection</label>
+        <select id="select" class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        <br/>
         <button type="submit" class="btn btn-primary">Submit</button>
+
     </form>
 </div>
