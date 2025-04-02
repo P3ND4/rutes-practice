@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { productList } from './table.mock';
 import { CommonModule } from '@angular/common';
